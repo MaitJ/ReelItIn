@@ -3,6 +3,7 @@ extends KinematicBody2D
 export var speed = 100
 var screen_size
 var is_casting
+var velocity = Vector2()
 
 onready var _animation_player = $AnimationPlayer
 
@@ -28,8 +29,9 @@ func _cast_animation():
 		_animation_player.play("CastStart")
 	pass
 	
-func _process(delta):
-	var velocity = Vector2()
+
+func get_input():
+	velocity.x = 0
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
 	if Input.is_action_pressed("move_left"):
@@ -38,11 +40,11 @@ func _process(delta):
 		velocity.y += 1
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1
-	if velocity.length() > 0:
-		velocity = velocity.normalized() * speed
+	velocity = velocity.normalized() * speed
 
-	position += velocity * delta
-	position.x = clamp(position.x, 0, screen_size.x)
-	position.y = clamp(position.y, 0, screen_size.y)
-
+func _process(delta):
 	_cast_animation()
+
+func _physics_process(delta):
+	get_input()
+	velocity = move_and_slide(velocity)
