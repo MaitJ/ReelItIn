@@ -9,18 +9,8 @@
 [node name="Map" parent="." instance=ExtResource( 1 )]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 53, 154 )
+position = Vector2( 91, 155 )
 
 [node name="Float" parent="." instance=ExtResource( 3 )]
-position = Vector2( 125, 162 )
-
-[node name="Line2D" type="Line2D" parent="."]
-position = Vector2( -59, -126 )
-points = PoolVector2Array( 123, 266, 128, 272, 144, 280, 152, 280, 168, 280, 184, 280 )
-width = 1.0
-default_color = Color( 1, 1, 1, 1 )
-joint_mode = 1
-begin_cap_mode = 1
-sharp_limit = 5.0
-round_precision = 15
-antialiased = true
+visible = false
+position = Vector2( 172, 80 )
