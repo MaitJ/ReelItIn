@@ -12,7 +12,6 @@ enum Direction {LEFT, RIGHT, UP, DOWN}
 onready var _animation_player = $AnimationPlayer
 onready var _float = get_parent().get_node("Float")
 
-
 func _ready():
 	screen_size = get_viewport_rect().size
 	_animation_player.connect("animation_finished", self, "_casting_finished")
@@ -56,6 +55,9 @@ func get_input():
 		dir = Direction.UP
 		is_float_cast = false
 	velocity = velocity.normalized() * speed
+	
+	if Input.is_action_just_pressed("cast"): ##ajutine, asendada signaaliga
+		RandomGeneration._item_generation()
 
 func _check_float():
 	if is_float_cast:

@@ -1,0 +1,20 @@
+[
+ {
+   "ID": 1003,
+   "Name": "Roach",
+   "Coins": 10,
+   "RarityWeight": "Common"
+ },
+ {
+   "ID": 1002,
+   "Name": "Pike",
+   "Coins": 25,
+   "RarityWeight": "Uncommon"
+ },
+ {
+   "ID": 1001,
+   "Name": "Brown Trout",
+   "Coins": 80,
+   "RarityWeight": "Rare"
+ }
+]
