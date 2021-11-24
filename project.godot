@@ -14,10 +14,15 @@ config/name="ReelItIn"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SignalBus="*res://SignalBus.gd"
+
 [display]
 
 window/size/width=480
 window/size/height=240
+window/size/fullscreen=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 

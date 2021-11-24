@@ -14,3 +14,8 @@ position = Vector2( 91, 155 )
 [node name="Float" parent="." instance=ExtResource( 3 )]
 visible = false
 position = Vector2( 172, 80 )
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 1.0
+default_color = Color( 0.854902, 0.854902, 0.854902, 1 )
+sharp_limit = 0.0
