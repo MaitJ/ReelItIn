@@ -50,7 +50,7 @@ func after_cast():
 
 func start_fishing():
 	randomize()
-	timer.wait_time = (randi() % 10 + 5)
+	timer.wait_time = (randi() % 5)
 	timer.start()
 	pass
 
@@ -58,6 +58,8 @@ func fish_bite():
 	#Emit rng function
 	signal_bus.emit_signal("fish_caught")
 	signal_bus.emit_signal("float_state_change", signal_bus.FloatState.TAKE)
+	timer.stop()
+	print("emitted fish_caught")
 
 func draw_fishing_line(player_pos: Vector2, float_pos: Vector2):
 	fishing_line.clear_points()

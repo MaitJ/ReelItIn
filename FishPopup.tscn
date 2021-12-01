@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://menuFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://FishPopup.gd" type="Script" id=3]
+
+[node name="FishPopup" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 89.0
+margin_top = 19.0
+margin_right = 387.0
+margin_bottom = 147.0
+color = Color( 0.2, 0.2, 0.2, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Msg" type="Label" parent="."]
+margin_left = 184.0
+margin_top = 100.0
+margin_right = 285.0
+margin_bottom = 114.0
+custom_fonts/font = ExtResource( 1 )
+text = "You received"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 154.0
+margin_top = 121.0
+margin_right = 225.0
+margin_bottom = 135.0
+custom_fonts/font = ExtResource( 1 )
+text = "Enter to keep"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 247.0
+margin_top = 121.0
+margin_right = 319.0
+margin_bottom = 135.0
+custom_fonts/font = ExtResource( 1 )
+text = "Esc to release"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishPic" type="Sprite" parent="."]
+position = Vector2( 237, 60 )
+scale = Vector2( 5, 5 )

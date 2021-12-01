@@ -21,28 +21,29 @@ __meta__ = {
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 480.0
-margin_bottom = 253.0
+margin_bottom = 240.0
 texture = ExtResource( 3 )
 expand = true
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_right = 480.0
-margin_bottom = 253.0
+margin_bottom = 240.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 115.0
+margin_top = 17.0
 margin_right = 365.0
-margin_bottom = 253.0
+margin_bottom = 222.0
 custom_constants/separation = 50
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
 margin_right = 250.0
-margin_bottom = 60.0
+margin_bottom = 12.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
-margin_left = 5.0
-margin_right = 245.0
-margin_bottom = 60.0
+margin_left = 102.0
+margin_right = 148.0
+margin_bottom = 12.0
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 4
@@ -50,9 +51,9 @@ custom_fonts/font = ExtResource( 1 )
 text = "Reel It In"
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
-margin_top = 110.0
+margin_top = 62.0
 margin_right = 250.0
-margin_bottom = 253.0
+margin_bottom = 205.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2"]
 margin_right = 250.0

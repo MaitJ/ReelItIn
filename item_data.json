@@ -1,0 +1,23 @@
+[
+ {
+   "ID": 1003,
+   "Name": "Roach",
+   "Coins": 10,
+   "RarityWeight": "Common",
+   "PictureLocation": "res://assets/Roach.png"
+ },
+ {
+   "ID": 1002,
+   "Name": "Pike",
+   "Coins": 25,
+   "RarityWeight": "Uncommon",
+   "PictureLocation": "res://assets/Pike.png"
+ },
+ {
+   "ID": 1001,
+   "Name": "Brown Trout",
+   "Coins": 80,
+   "RarityWeight": "Rare",
+   "PictureLocation": "res://assets/BrownTrout.png"
+ }
+]
