@@ -8,6 +8,8 @@ signal fish_caught
 
 signal fish_popup(fish)
 
+signal fish_hooked(fish)
+
 
 func _ready():
 	pass

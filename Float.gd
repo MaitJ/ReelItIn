@@ -10,14 +10,13 @@ func _ready():
 
 func on_float_state_change(new_state):
 	float_state = new_state
-	pass
+	if float_state == signal_bus.FloatState.TAKE:
+		animation_player.play("Take")
+	else:
+		animation_player.play("Flying")
 
 func _process(_delta):
 	if float_state == signal_bus.FloatState.BOBBING:
 		animation_player.play("Bobbing")
-	elif float_state == signal_bus.FloatState.TAKE:
-		animation_player.play("Take")
-	else:
-		animation_player.play("Flying")
 
 

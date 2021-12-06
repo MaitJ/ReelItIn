@@ -10,9 +10,8 @@ func _item_generation():
     print("fish_caught signal received")
     var new_item
     new_item = _item_determine_rarity()
-    print(new_item)
     ##siia oleks signaali/funktsiooni vaja, mis toob ette menüü
-    signal_bus.emit_signal("fish_popup", new_item)
+    return new_item
 
 func _item_determine_rarity():
     var rarity_scope_array = []
