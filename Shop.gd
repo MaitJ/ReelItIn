@@ -1,28 +1,36 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 onready var signal_bus = get_node("/root/SignalBus")
+onready var global_variables = get_node("/root/GlobalVariables")
 onready var roach_amount = get_node("Roach_amount")
 onready var pike_amount = get_node("Pike_amount")
 onready var trout_amount = get_node("Trout_amount")
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	signal_bus.connect("fish_sell", self, "on_fish_sell")
-	for button in get_tree().get_nodes_in_group("Sell_buttons"):
-		button.connect("pressed", self, "_sell_button_pressed", [button])
-	pass # Replace with function body.
-
-func on_fish_sell(fish):
-	signal_bus.gold_amount += fish.Coins
-
-func _sell_button_pressed():
-	on_fish_sell(fish)
+	signal_bus.connect("send_caught_fish", self, "on_send_caught_fish")
+	signal_bus.connect("shop_visible", self, "on_shop_visible")
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func on_shop_visible(state):
+	print("shop should be toggled")
+	visible = state
+
+func _process(delta):
+	roach_amount.text = str(global_variables.roaches.size())
+	pike_amount.text = str(global_variables.pikes.size())
+	trout_amount.text = str(global_variables.trouts.size())
+
+func _on_Sell_roach_pressed():
+	print("roach sold")
+	signal_bus.emit_signal("fish_sell", global_variables.roaches.front())
+	global_variables.roaches.pop_front()
+
+
+func _on_Sell_pike_pressed():
+	signal_bus.emit_signal("fish_sell", global_variables.pikes.front())
+	global_variables.pikes.pop_front()
+
+
+func _on_Sell_trout_pressed():
+	signal_bus.emit_signal("fish_sell", global_variables.trouts.front())
+	global_variables.trouts.pop_front()

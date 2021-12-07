@@ -10,20 +10,26 @@
 script = ExtResource( 5 )
 
 [node name="Inventory" type="TextureRect" parent="."]
-margin_left = 120.176
-margin_top = 38.8428
-margin_right = 370.176
-margin_bottom = 288.843
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 176.0
+margin_top = 124.0
+margin_right = 426.0
+margin_bottom = 374.0
+rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Roach_count" type="Label" parent="."]
-margin_left = 142.976
-margin_top = 203.907
-margin_right = 182.976
-margin_bottom = 217.907
+margin_left = 188.0
+margin_top = 207.0
+margin_right = 228.0
+margin_bottom = 221.0
+rect_scale = Vector2( 0.5, 0.5 )
 text = "1"
 align = 1
 __meta__ = {
@@ -31,10 +37,11 @@ __meta__ = {
 }
 
 [node name="Roach" type="TextureRect" parent="."]
-margin_left = 146.324
-margin_top = 177.108
-margin_right = 183.324
-margin_bottom = 208.108
+margin_left = 189.0
+margin_top = 192.0
+margin_right = 226.0
+margin_bottom = 223.0
+rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 stretch_mode = 1
 __meta__ = {
@@ -42,18 +49,20 @@ __meta__ = {
 }
 
 [node name="Pike_count" type="Label" parent="."]
-margin_left = 198.862
-margin_top = 203.916
-margin_right = 238.862
-margin_bottom = 217.916
+margin_left = 215.0
+margin_top = 207.0
+margin_right = 255.0
+margin_bottom = 221.0
+rect_scale = Vector2( 0.5, 0.5 )
 text = "2"
 align = 1
 
 [node name="Pike" type="TextureRect" parent="."]
-margin_left = 201.115
-margin_top = 175.851
-margin_right = 238.115
-margin_bottom = 206.851
+margin_left = 216.0
+margin_top = 192.0
+margin_right = 253.0
+margin_bottom = 223.0
+rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
 stretch_mode = 1
 __meta__ = {
@@ -61,10 +70,11 @@ __meta__ = {
 }
 
 [node name="Trout_count" type="Label" parent="."]
-margin_left = 254.665
-margin_top = 204.065
-margin_right = 294.665
-margin_bottom = 218.065
+margin_left = 243.0
+margin_top = 207.0
+margin_right = 283.0
+margin_bottom = 221.0
+rect_scale = Vector2( 0.5, 0.5 )
 text = "3"
 align = 1
 __meta__ = {
@@ -72,10 +82,11 @@ __meta__ = {
 }
 
 [node name="Trout" type="TextureRect" parent="."]
-margin_left = 257.171
-margin_top = 176.309
-margin_right = 294.171
-margin_bottom = 207.309
+margin_left = 244.0
+margin_top = 192.0
+margin_right = 281.0
+margin_bottom = 223.0
+rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 stretch_mode = 1
 __meta__ = {
