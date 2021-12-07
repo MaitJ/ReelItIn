@@ -22,6 +22,8 @@ onready var _animation_player = $AnimationPlayer
 onready var _float = get_parent().get_node("Float")
 onready var signal_bus = get_node("/root/SignalBus")
 onready var fishing_line: Line2D = get_parent().get_node("Line2D")
+onready var catch_area: Area2D = get_node("CatchArea")
+
 var timer 
 var bite_timer
 
@@ -36,6 +38,13 @@ func _ready():
 	_animation_player.connect("animation_finished", self, "_casting_finished")
 	timer.connect("timeout", self, "fish_bite")
 	bite_timer.connect("timeout", self, "missed_bite")
+	catch_area.connect("body_entered", self, "fish_entered")
+	signal_bus.connect("fish_caught", self, "fish_caught")
+
+func fish_caught():
+	fishing_line.clear_points()
+	current_state = PlayerState.STANDING
+	active_fish.queue_free()
 
 func _casting_finished(anim_name):
 	if anim_name == "CastThrow":
@@ -54,6 +63,11 @@ func _cast_animation():
 			after_cast()
 		if is_casting:
 			_animation_player.play("CastStart")
+
+func fish_entered(body: Node):
+	if body.name == "Fish":
+		signal_bus.emit_signal("fish_popup", body)
+
 	
 func after_cast():
 	_float.position = Vector2(position.x + 60, position.y + 10)

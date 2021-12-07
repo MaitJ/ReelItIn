@@ -9,10 +9,10 @@ func _ready():
 	pass
 
 func on_fish_popup(fish):
-	print("fish popup should appear")
 	visible = true
-	popup_msg.text = "You received: " + fish.Name
-	fish_pic_sprite.texture = load(fish.PictureLocation)
+	popup_msg.text = "You received: " + fish.fish_name
+	fish_pic_sprite.texture = load(fish.pictureLocation)
+	signal_bus.emit_signal("fish_caught")
 	pass
 
 func _process(delta):

@@ -4,6 +4,7 @@
    "Name": "Roach",
    "Coins": 10,
    "RarityWeight": "Common",
+   "Mass": 400,
    "PictureLocation": "res://assets/Roach.png",
    "Strength": 20
  },
@@ -12,15 +13,17 @@
    "Name": "Pike",
    "Coins": 25,
    "RarityWeight": "Uncommon",
+   "Mass": 2000,
    "PictureLocation": "res://assets/Pike.png",
-   "Strength": 50
+   "Strength": 20
  },
  {
    "ID": 1001,
    "Name": "Brown Trout",
    "Coins": 80,
    "RarityWeight": "Rare",
+   "Mass": 1000,
    "PictureLocation": "res://assets/BrownTrout.png",
-   "Strength": 50
+   "Strength": 20
  }
 ]

@@ -44,10 +44,10 @@ margin_bottom = 12.0
 margin_left = 102.0
 margin_right = 148.0
 margin_bottom = 12.0
-custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 4
+custom_fonts/font = ExtResource( 1 )
 text = "Reel It In"
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
@@ -71,10 +71,10 @@ margin_bottom = 45.0
 margin_right = 21.0
 margin_bottom = 45.0
 rect_min_size = Vector2( 21, 0 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 2 )
 text = ">"
 
 [node name="OptionName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
@@ -82,10 +82,10 @@ margin_left = 25.0
 margin_right = 250.0
 margin_bottom = 45.0
 rect_min_size = Vector2( 225, 0 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 2 )
 text = "Start Game"
 
 [node name="CenterContainer3" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
@@ -101,10 +101,10 @@ margin_bottom = 45.0
 margin_right = 21.0
 margin_bottom = 45.0
 rect_min_size = Vector2( 21, 0 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 2 )
 text = ">"
 
 [node name="OptionName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
@@ -112,10 +112,10 @@ margin_left = 25.0
 margin_right = 250.0
 margin_bottom = 45.0
 rect_min_size = Vector2( 225, 0 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 2 )
 text = "Options"
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
@@ -131,10 +131,10 @@ margin_bottom = 45.0
 margin_right = 21.0
 margin_bottom = 45.0
 rect_min_size = Vector2( 21, 0 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 2 )
 text = ">"
 
 [node name="OptionName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer"]
@@ -142,8 +142,8 @@ margin_left = 25.0
 margin_right = 250.0
 margin_bottom = 45.0
 rect_min_size = Vector2( 225, 0 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 2 )
 text = "Exit"

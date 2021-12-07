@@ -12,7 +12,8 @@ var pictureLocation: String
 var rarity: String
 var strength: float
 
-var speed: int = 40
+var speed: int = 20
+var mass: int
 var velocity: Vector2
 var swim_dir: Vector2
 
@@ -24,6 +25,7 @@ func init_stats(fish):
     pictureLocation = fish.PictureLocation
     rarity = fish.RarityWeight
     strength = fish.Strength
+    mass = fish.Mass
 
 func _ready():
     FishGeneration = get_parent().get_node("RandomGeneration")
@@ -49,15 +51,22 @@ func random_swim_dir():
 
 func change_swim_dir():
     swim_dir = random_swim_dir()
-    velocity = swim_dir
 
 
 func _physics_process(delta):
-    velocity = velocity.normalized() * speed
-    velocity = move_and_slide(velocity, Vector2.UP)
-
     var dir_to_mouse = position.direction_to(get_global_mouse_position())
     var dot = swim_dir.normalized().dot(dir_to_mouse)
+
+
+    velocity += swim_dir
+
+    velocity = velocity.normalized() * strength
+
+    if Input.is_action_pressed("cast"):
+        velocity += dir_to_mouse * 40
+
+    velocity = move_and_slide(velocity, Vector2.UP)
+
 
     if dot < 0.0:
         var _cur_dps = lerp(0, player.strength_ps, abs(dot))
