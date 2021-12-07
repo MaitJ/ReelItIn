@@ -1,0 +1,94 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/inventory.png" type="Texture" id=1]
+[ext_resource path="res://assets/Roach.png" type="Texture" id=2]
+[ext_resource path="res://assets/BrownTrout.png" type="Texture" id=3]
+[ext_resource path="res://assets/Pike.png" type="Texture" id=4]
+[ext_resource path="res://Inventory.gd" type="Script" id=5]
+
+[node name="Inventory" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Inventory" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 176.0
+margin_top = 124.0
+margin_right = 426.0
+margin_bottom = 374.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Roach_count" type="Label" parent="."]
+margin_left = 188.0
+margin_top = 207.0
+margin_right = 228.0
+margin_bottom = 221.0
+rect_scale = Vector2( 0.5, 0.5 )
+text = "1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Roach" type="TextureRect" parent="."]
+margin_left = 189.0
+margin_top = 192.0
+margin_right = 226.0
+margin_bottom = 223.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pike_count" type="Label" parent="."]
+margin_left = 215.0
+margin_top = 207.0
+margin_right = 255.0
+margin_bottom = 221.0
+rect_scale = Vector2( 0.5, 0.5 )
+text = "2"
+align = 1
+
+[node name="Pike" type="TextureRect" parent="."]
+margin_left = 216.0
+margin_top = 192.0
+margin_right = 253.0
+margin_bottom = 223.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Trout_count" type="Label" parent="."]
+margin_left = 243.0
+margin_top = 207.0
+margin_right = 283.0
+margin_bottom = 221.0
+rect_scale = Vector2( 0.5, 0.5 )
+text = "3"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Trout" type="TextureRect" parent="."]
+margin_left = 244.0
+margin_top = 192.0
+margin_right = 281.0
+margin_bottom = 223.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

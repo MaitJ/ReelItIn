@@ -11,16 +11,19 @@ var fish_resource = load("res://Fish.tscn")
 export var speed = 100
 var screen_size
 var is_casting
+var gold_amount = 0
 var velocity = Vector2()
 var is_float_cast = false
 var active_fish
 var current_state = PlayerState.STANDING
+var shop_is_visible = false
 
 var strength_ps: float = 10
 
 onready var _animation_player = $AnimationPlayer
 onready var _float = get_parent().get_node("Float")
 onready var signal_bus = get_node("/root/SignalBus")
+onready var shop_pos = get_node("/root/Game/ShopNpc")
 onready var fishing_line: Line2D = get_parent().get_node("Line2D")
 onready var catch_area: Area2D = get_node("CatchArea")
 
@@ -45,6 +48,8 @@ func fish_caught():
 	fishing_line.clear_points()
 	current_state = PlayerState.STANDING
 	active_fish.queue_free()
+	signal_bus.connect("fish_sell", self, "on_fish_sell")
+	signal_bus.connect("shop_visible", self, "on_shop_visible")
 
 func _casting_finished(anim_name):
 	if anim_name == "CastThrow":
@@ -158,13 +163,22 @@ func _check_float():
 
 func _process(_delta):
 	_check_float()
-	_cast_animation()
+	if shop_is_visible == false:
+		_cast_animation()
 	hooking_check()
 	move_fishing_line()
-
-
-
 	
 func _physics_process(_delta):
 	get_input()
 	velocity = move_and_slide(velocity)
+
+func _on_ShopNpc_body_entered(body):
+	if body.name == "TileMap":
+		return
+	print(body.name)
+	signal_bus.emit_signal("shop_visible", true)
+	shop_is_visible = true
+
+func _on_ShopNpc_body_exited(body):
+	signal_bus.emit_signal("shop_visible", false)
+	shop_is_visible = false
