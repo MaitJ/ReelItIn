@@ -15,6 +15,7 @@ margin_left = -18.1471
 margin_top = -11.3679
 margin_right = 237.853
 margin_bottom = 244.632
+mouse_filter = 2
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -86,20 +87,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SellButton3" type="Button" parent="." groups=[
-"Sell_buttons",
-]]
-margin_left = 149.0
-margin_top = 106.0
-margin_right = 200.0
-margin_bottom = 128.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="SellButton" type="Button" parent="." groups=[
-"Sell_buttons",
-]]
+[node name="Sell_roach" type="Button" parent="."]
 margin_left = 149.0
 margin_top = 58.0
 margin_right = 199.0
@@ -108,9 +96,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SellButton2" type="Button" parent="." groups=[
-"Sell_buttons",
-]]
+[node name="Sell_pike" type="Button" parent="."]
+margin_left = 149.0
+margin_top = 106.0
+margin_right = 200.0
+margin_bottom = 128.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sell_trout" type="Button" parent="."]
 margin_left = 149.0
 margin_top = 155.0
 margin_right = 199.0
@@ -124,6 +119,7 @@ margin_left = 104.53
 margin_top = 86.5551
 margin_right = 232.53
 margin_bottom = 214.555
+mouse_filter = 2
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -134,17 +130,23 @@ margin_left = 104.882
 margin_top = 37.9129
 margin_right = 232.882
 margin_bottom = 165.913
+mouse_filter = 2
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SellButtonImage" type="TextureRect" parent="."]
-margin_left = 104.898
-margin_top = -9.74484
-margin_right = 232.898
-margin_bottom = 118.255
+margin_left = 105.0
+margin_top = -10.0
+margin_right = 233.0
+margin_bottom = 118.0
+mouse_filter = 2
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[connection signal="pressed" from="Sell_roach" to="." method="_on_Sell_roach_pressed"]
+[connection signal="pressed" from="Sell_pike" to="." method="_on_Sell_pike_pressed"]
+[connection signal="pressed" from="Sell_trout" to="." method="_on_Sell_trout_pressed"]
