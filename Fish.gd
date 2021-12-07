@@ -6,6 +6,8 @@ var FishGeneration
 
 var rng = RandomNumberGenerator.new()
 
+var fish_json
+
 var fish_name: String
 var price: int
 var pictureLocation: String
@@ -20,6 +22,7 @@ var swim_dir: Vector2
 var swim_dir_timer
 
 func init_stats(fish):
+    fish_json = fish
     fish_name = fish.Name
     price = fish.Coins
     pictureLocation = fish.PictureLocation

@@ -18,7 +18,7 @@ var active_fish
 var current_state = PlayerState.STANDING
 var shop_is_visible = false
 
-var strength_ps: float = 10
+var strength_ps: float = 5
 
 onready var _animation_player = $AnimationPlayer
 onready var _float = get_parent().get_node("Float")
@@ -47,9 +47,6 @@ func _ready():
 func fish_caught():
 	fishing_line.clear_points()
 	current_state = PlayerState.STANDING
-	active_fish.queue_free()
-	signal_bus.connect("fish_sell", self, "on_fish_sell")
-	signal_bus.connect("shop_visible", self, "on_shop_visible")
 
 func _casting_finished(anim_name):
 	if anim_name == "CastThrow":
@@ -72,7 +69,6 @@ func _cast_animation():
 func fish_entered(body: Node):
 	if body.name == "Fish":
 		signal_bus.emit_signal("fish_popup", body)
-
 	
 func after_cast():
 	_float.position = Vector2(position.x + 60, position.y + 10)

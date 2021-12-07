@@ -18,24 +18,27 @@ func _ready():
 
 func on_fish_popup(fish):
 	visible = true
-	popup_msg.text = "You received: " + fish.fish_name
+	fish_name.text = fish.fish_name
+	fish_weight.text = fish.rarity
+	local_fish = fish
 	fish_pic_sprite.texture = load(fish.pictureLocation)
 	signal_bus.emit_signal("fish_caught")
 	pass
 
-func _process(delta):
+func _process(_delta):
 	if visible:
 		if Input.is_action_pressed("ui_accept"):
 			caught_fishes.append(local_fish)
-			if local_fish.Name == "Roach":
-				global_variables.roaches.append(local_fish)
-			elif local_fish.Name == "Pike":
-				global_variables.pikes.append(local_fish)
+			if local_fish.fish_name == "Roach":
+				global_variables.roaches.append(local_fish.fish_json)
+			elif local_fish.fish_name == "Pike":
+				global_variables.pikes.append(local_fish.fish_json)
 				#signal_bus.pike_counter += 1
-			elif local_fish.Name == "Brown Trout":
-				global_variables.trouts.append(local_fish)
+			elif local_fish.fish_name == "Brown Trout":
+				global_variables.trouts.append(local_fish.fish_json)
 				#signal_bus.trout_counter += 1
 			signal_bus.emit_signal("send_caught_fish", caught_fishes)
+			local_fish.queue_free()
 			visible = false
 		if Input.is_action_pressed("ui_cancel"):
 			visible = false
