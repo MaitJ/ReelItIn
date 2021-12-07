@@ -17,13 +17,12 @@ func _ready():
 	pass
 
 func on_fish_popup(fish):
-	print("fish popup should appear")
 	visible = true
-	fish_name.text = fish.Name
-	fish_weight.text = fish.RarityWeight
-	local_fish = fish
-	fish_pic_sprite.texture = load(fish.PictureLocation)
-	
+	popup_msg.text = "You received: " + fish.fish_name
+	fish_pic_sprite.texture = load(fish.pictureLocation)
+	signal_bus.emit_signal("fish_caught")
+	pass
+
 func _process(delta):
 	if visible:
 		if Input.is_action_pressed("ui_accept"):

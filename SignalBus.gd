@@ -13,10 +13,8 @@ var gold_amount = 0
 signal fish_popup(fish)
 signal send_caught_fish(fishes)
 
-var fish_in_inventory = 0
-var roach_counter = 0
-var pike_counter = 0
-var trout_counter = 0
+signal fish_hooked(fish)
+
 
 func _ready():
 	pass

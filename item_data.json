@@ -4,20 +4,26 @@
    "Name": "Roach",
    "Coins": 10,
    "RarityWeight": "Common",
-   "PictureLocation": "res://assets/Roach.png"
+   "Mass": 400,
+   "PictureLocation": "res://assets/Roach.png",
+   "Strength": 20
  },
  {
    "ID": 1002,
    "Name": "Pike",
    "Coins": 25,
    "RarityWeight": "Uncommon",
-   "PictureLocation": "res://assets/Pike.png"
+   "Mass": 2000,
+   "PictureLocation": "res://assets/Pike.png",
+   "Strength": 20
  },
  {
    "ID": 1001,
    "Name": "Brown Trout",
    "Coins": 80,
    "RarityWeight": "Rare",
-   "PictureLocation": "res://assets/BrownTrout.png"
+   "Mass": 1000,
+   "PictureLocation": "res://assets/BrownTrout.png",
+   "Strength": 20
  }
 ]
